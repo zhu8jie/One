@@ -8,8 +8,8 @@ wc -w		#统计字数
 grep -v 		#排除匹配
 head [-99]		#得到头部默认10条 可设置成99条
 
-ps -aux
-netstat -apn
+ps -aux      查看进程
+netstat -apn     查看端口
 
 find / -mtime -1 -print  一日以内的。包括修改的和创建的。
 find / -mtime +1 -print 一日以前的。
