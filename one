@@ -1,0 +1,21 @@
+gz压缩日志的检索
+zgrep 匹配文本 <文件>
+
+wc -l		#统计行数
+wc -c		#统计字节数
+wc -w		#统计字数
+
+grep -v 		#排除匹配
+head [-99]		#得到头部默认10条 可设置成99条
+
+ps -aux
+netstat -apn
+
+find / -mtime -1 -print  一日以内的。包括修改的和创建的。
+find / -mtime +1 -print 一日以前的。
+ 
+ssh
+/etc/rc.d/init.d/sshd restart			重启ssh服务
+
+linux学习
+http://www.study-area.org/linux/linuxfr1.htm
