@@ -1,7 +1,7 @@
 awk是行处理器: 相比较屏幕处理的优点，在处理庞大文件时不会出现内存溢出或是处理缓慢的问题，通常用来格式化文本信息
 awk处理过程: 依次对每一行进行处理，然后输出
 awk命令形式:
-awk [-F|-f|-v] ‘BEGIN{} //{command1; command2} END{}’ file
+awk [-F|-f|-v] 'BEGIN{} //{command1; command2} END{}' file
  [-F|-f|-v]   大参数，-F指定分隔符，-f调用脚本，-v定义变量 var=value
 '  '          引用代码块
 BEGIN   初始化代码块，在对每一行进行处理之前，初始化代码，主要是引用全局变量，设置FS分隔符
