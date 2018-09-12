@@ -1,0 +1,50 @@
+1.配置epel源
+  下载源
+  wget https://mirrors.ustc.edu.cn/epel//6/x86_64/epel-release-6-8.noarch.rpm
+  
+  然后执行如下命令：
+  rpm -ivh epel-release-6-8.noarch.rpm 
+  对这个rpm包进行安装
+  
+  然后执行下面的命令进行清除和更新yum列表
+  yum clean all
+  yum repolist
+
+  epel源配置完成
+  
+2.安装zsh
+  yum install zsh
+  
+  安装完成后 ，执行
+  chsh -s /bin/zsh
+  替换默认shell
+  完成后执行命令 
+  reboot
+  重启，即可更改默认shell
+  
+3.如果没有 git 需要安装git
+  yum install git
+  
+4.安装 oh-my-zsh
+  sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+  可能会遇到 clone 克隆失败的问题
+  可以先把sh脚本下载下来看看问题在哪
+  wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+  
+  vim install.sh 查看问题
+  找到 git clone 的命令行，发现这里克隆的地址是http的，在浏览器打开这个链接，拿到git链接，修改此链接为git链接，如下：
+  git clone --depth=1 git@github.com:robbyrussell/oh-my-zsh.git
+  
+  如果还报克隆失败错误，可以在这个仓库里加上你的ssh key ，问题得到解决。
+  
+  后面再执行
+  sh install.sh
+  出现大图片 oh my zsh ... is now installed.
+  
+  安装完成
+  
+  vim ~/.zshrc
+  修改
+  ZSH_THEME=""          #默认有两个选项{ "robbyrussell" "agnoster" }
+  
+  
